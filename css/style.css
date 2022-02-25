@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+/* ######     utility class ########## */
+.heading{
+    text-align: center;
+    text-transform: capitalize;
+    padding: 2rem 0;
+}
+
+.banner{
+    position: relative;
+    height: 95vh;
+    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5), rgba(0,0,0,0.5)) ,url('../img/travel.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+.banner .banner_content{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    padding: 1rem;
+}   
+.banner .banner_content h1{
+    text-transform: capitalize;
+}
+.banner .banner_content a{
+    text-decoration: none;
+    color: #e63653;
+    padding: 0.6rem;
+    font-weight: 500;
+    margin: 1rem;
+    background-color: white;
+    border-radius: 0.7rem;
+    text-transform: uppercase;
+}
+
+
+.places{
+    background-color: #ddd;
+}
+
+.places .card_boxes{
+    margin: 0 8rem;
+    padding-bottom: 3rem;
+} 
+.places .cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+/* #######  GALLERY   ####### */
+.gallery{
+    background: #ddd;
+    padding-bottom: 2rem;
+}
+/* .container-lg img{
+    max-width: 100%;
+} */
+.hovereffect{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hovereffect .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0,0,0, 0.5);
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+.hovereffect img{
+    display: block;
+    position: relative;
+    transition: all 0.4s linear;
+    margin: 1rem;
+}
+/* .hovereffect .overlay h2{
+    text-transform: capitalize;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: rgba(0,0,0, 0.6);
+    transform: translateY(-8rem);
+    transition: all 0.2s ease-in-out;
+    padding: 0.8rem;
+} */
+.hovereffect:hover img{
+    transform: scale(1.2);
+}
+.hovereffect:hover .overlay{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+/* .hovereffect:hover h2{
+    opacity: 1;
+    filter: alpha(opacity=100);
+} */
+
+
+
+ 
+/* #########   user review ##### */
+.review{
+    padding: 2.5rem;
+}
+/* .review h1{
+    text-transform: capitalize;
+    text-align: center;
+    padding: 1rem;
+} */
+.user_review{
+    text-align: center;
+    padding-bottom: 5rem;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    box-shadow: 0px 0px 20px 0px rgb(61, 59, 59);
+}
+.user_review p{
+    padding: 1rem 0.5rem 0.5rem 1rem;
+}
+.review img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: relative;
+    margin: -2.5rem 0 2rem 40%;
+}
+
+.user_review p::before{
+    content: '\201d';
+    display: block;
+    font-size: 3.5rem;
+    color: #6495ed;
+    left: 50%;
+    font-family: sans-serif;
+    top: -1rem;
+}
+
+/* #### contact ##### */
+.contactUs
+{
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(114, 49, 114);
+    margin-top: 1.5rem;
+}
+.contactUs .contactContainer{
+    position: relative;
+    padding: 3rem;
+    background: #fff;
+    overflow: hidden;
+}
+.contactUs .contact
+{    
+    max-width: 60rem;
+    text-align: center;
+}
+.contactUs .contact h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.contactUs .contact p{
+    font-weight: 300;
+    color: #494343;
+}
+.contactUs .containerss{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contactUs .containerss .contactinfo{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.contactUs .containerss .contactinfo .box
+{
+    padding: 1rem 0;
+    display: flex;
+}
+.contactUs .containerss .contactinfo .box .icon{
+    min-width: 4rem;
+    height: 4rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+.contactUs .containerss .contactinfo .box .text
+{
+    display: flex;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contactUs .containerss .contactinfo .box .text h2{
+    font-weight: 500;
+    color: #00bcd4;
+}
+.contactUs .contactForm{
+    width: 40%;
+    padding: 1rem;
+    background: #fff;
+}
+.contactUs .contactForm h2{
+    font-size: 2rem;
+    color: #333;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+}
+.contactForm .inputBox{
+    /* position: relative; */
+    /* width: 100%; */
+    margin-top: 1rem;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-bottom: 0.1rem solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactUs .contactForm .inputBox input[type="submit"]{
+    width: 100%;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+
+/* ############ FOOTER STYLING ############ */
+.footer{
+    background-color: rgb(61, 55, 55);
+    color: white;
+    padding: 0.3rem;
+    text-align: center;
+}
+.footer a{
+    color: white;
+}
+.social-media-links {
+    margin: 0.5rem;
+}
+.social-media-links:hover {
+    color: #e63653;
+}
+
+@media screen and (max-width : 1024px)
+{
+    .contactUs .contactContainer{
+        max-height : fit-content;
+    }
+    .contactUs .contact{
+        padding: 12.5px;
+    }
+    .contactUs .containerss{
+        flex-direction: column;
+    }
+    .contactUs .containerss .contactinfo{
+        margin-bottom: 12.5px;
+    }
+    .contactUs .contactForm{
+        width: 100%;
+    }
+    .users{
+        flex-direction: column;
+    }
+    .card{
+        margin: 1rem;
+    }
+}
+@media (min-width : 768px) and (max-width : 1023px)
+{
+    .contactUs .contact{
+        padding: 1rem;
+    }
+    .contactUs .containerss{
+        flex-direction: column;
+    }
+    .contactUs .containerss .contactinfo{
+        margin-bottom: 1rem;
+        width: 50%;
+    }
+    .contactUs .contactForm{
+        width: 100%;
+    }
+    .users{
+        flex-direction: column;
+    }
+    .review img{
+        width: 6rem;
+        height: 6rem;
+        margin: -3rem 0 2rem 45%;
+    }
+    .card{
+        margin: 1rem;
+    }
+}
+@media (min-width: 0px) and (max-width : 767px)
+{
+    .contactUs
+    {
+        padding: 0.5rem;
+    }
+    .contactUs .contact h2{
+        font-size: 2rem;
+    }
+    .contactUs .contactForm h2{
+        font-size: 1.5rem;
+    }
+    .contactUs .containerss .contactinfo{
+        width: 100%;
+    }
+    .card_boxes{
+        flex-direction: column;
+    }
+}
